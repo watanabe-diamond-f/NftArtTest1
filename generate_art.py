@@ -18,6 +18,7 @@ def generate_art(path: str):
     points = []
 
     # 描画範囲処理
+    # 線を減らしたい場合はrangeの中を減らしてください
     for _ in range(10):
         random_point = (
             random.randint(padding_px, image_size_px - padding_px),
