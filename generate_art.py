@@ -18,7 +18,7 @@ def generate_art(path: str):
     points = []
 
     # 描画範囲処理
-    # 線を減らしたい場合はrangeの中を減らしてください
+    # 線を増減したい場合はrangeの中を減らしてください。最小数は2です
     for _ in range(10):
         random_point = (
             random.randint(padding_px, image_size_px - padding_px),
@@ -84,5 +84,6 @@ def interpolate(start_color, end_color, factor: float):
     )
 
 if __name__ == "__main__":
+    # 描画ファイルを増減したい場合はrangeの中を変更してください
     for i in range(10):
         generate_art(f"test_image_{i}.png")
